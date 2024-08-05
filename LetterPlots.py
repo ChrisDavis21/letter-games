@@ -31,8 +31,8 @@ print('Number of Wordle words: %2d' % (len(WordleList)))
 print('Number of useable words: %2d' % (len(AllWordsL5)))
 
 # Plot Creation
-fig1, ((ax0, ax1), (ax2, ax3)) = plt.subplots(ncols = 2, nrows = 2, figsize = (12,8))
-fig2 = plt.figure(figsize = (12,8))
+fig1, ((ax0, ax1), (ax2, ax3)) = plt.subplots(ncols = 2, nrows = 2, figsize = (14,8))
+fig2 = plt.figure(figsize = (14,8))
 gs = GridSpec(1, 4, figure=fig2)
 ax4 = fig2.add_subplot(gs[:,0])
 ax5 = fig2.add_subplot(gs[:,1])
@@ -245,3 +245,5 @@ cbar3.set_label('Proportion')
 ax6.set_ylabel('Letter'); ax6.set_xlabel('Subsequent Letter'); ax6.set_title("G: Subsequent Letter Likelihood", loc='left')
 
 plt.show()
+fig1.savefig('LetterGames1.png', edgecolor='white', dpi=300, facecolor='white', transparent=True)
+fig2.savefig('LetterGames2.png', edgecolor='white', dpi=300, facecolor='white', transparent=True)
