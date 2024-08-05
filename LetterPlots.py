@@ -132,9 +132,13 @@ print(f'Proportional Breakdown by Number of Distinct Letters')
 print(f'([2 [Wordle, Scrabble]], [3], [4], [5]): {LetterCountProportions}')
 
 # Supplemental: Highest Ratio of total length to distinct letters for any length word:
+maxlength = 11
 for j, word in enumerate(CollinsList):
     if len(word)/len(set(word)) >= 3.0: print(f'{word}; {len(word)/len(set(word))}')
-    
+    if len(word)/len(set(word)) == 1.0 and len(word) >= maxlength:
+        print(f'{word}; {len(word)/len(set(word))}')
+        maxlength = len(word)
+
 
 # Figure 2: Letter Location Heatmaps #
 
